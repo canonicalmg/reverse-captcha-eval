@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Results (generated - keep analysis CSVs and figures)
+*.sqlite
+results.csv
+results.json
+!results/journal/analysis/*.csv
+!results/journal/figures/*.png
+!results/journal/figures/*.pdf
+
+# Report output (generated)
+report/*.png
+report/summary.md
+report/summary.json
+
+# Paper build artifacts (keep .tex and final .pdf)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.synctex*
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Claude
+.claude/

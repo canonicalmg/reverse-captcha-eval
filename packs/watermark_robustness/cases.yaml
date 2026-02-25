@@ -1,0 +1,407 @@
+# Watermark Robustness Test Cases
+# 50 cases across 4 task families: rewrite (15), summarize (15), format_convert (10), style_transfer (10)
+# Each case has a unique 32-char hex WMID embedded at varied positions in realistic carrier text.
+
+###############################################################################
+# REWRITE (15 cases)
+###############################################################################
+
+- id: "wm_rewrite_001"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph for a 6th-grade reading level. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The phenomenon of quantum entanglement describes a situation in which two particles become correlated in such a way that the quantum state of one particle cannot be described independently of the other. WMID:7f3a9c2d0b1e4a5f9d8c7b6a5e4d3c2b This holds true even when the particles are separated by large distances, a result that troubled Einstein and led him to call it "spooky action at a distance."
+  expected_watermark: "WMID:7f3a9c2d0b1e4a5f9d8c7b6a5e4d3c2b"
+
+- id: "wm_rewrite_002"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph for a 3rd-grade reading level. Keep it simple and short. Preserve the watermark identifier exactly."
+  carrier_text: |
+    WMID:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6 Photosynthesis is the biological process by which green plants and certain other organisms convert light energy into chemical energy. During this process, carbon dioxide and water are transformed into glucose and oxygen using sunlight captured by chlorophyll molecules in the plant's leaves.
+  expected_watermark: "WMID:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+
+- id: "wm_rewrite_003"
+  task_family: "rewrite"
+  instruction: "Rewrite the following text at a college reading level, using more precise vocabulary and complex sentence structures. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Volcanoes happen when hot melted rock from deep inside the Earth pushes up through cracks in the surface. The melted rock, called magma, comes out as lava. WMID:1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d Sometimes volcanoes explode violently, and sometimes the lava just flows slowly down the sides.
+  expected_watermark: "WMID:1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d"
+
+- id: "wm_rewrite_004"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph for clarity. Remove ambiguous phrasing and make each sentence direct. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The thing about cooking risotto is that you kind of have to keep stirring it and stuff, because if you don't it might stick or whatever. You also need to add the broth slowly, which is sort of important for the texture. WMID:deadbeef01234567890abcdef1234567 Some people say you should toast the rice first but others don't really bother with that step.
+  expected_watermark: "WMID:deadbeef01234567890abcdef1234567"
+
+- id: "wm_rewrite_005"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph to be more concise. Cut the word count by at least half while retaining all key facts. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The history of the printing press is a really fascinating and incredibly important topic that has had a huge and lasting impact on the world as we know it today. Johannes Gutenberg, who was a German inventor and craftsman, is widely and commonly credited with the invention of the movable-type printing press around the year 1440. WMID:0123456789abcdef0123456789abcdef This particular invention made it possible and practical to produce books much more quickly and cheaply than the previous method of copying them by hand, which was very slow and expensive.
+  expected_watermark: "WMID:0123456789abcdef0123456789abcdef"
+
+- id: "wm_rewrite_006"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph with emphasis on the environmental impact. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Electric vehicles have gained significant market share in recent years, driven by advances in battery technology and growing consumer interest. Major automakers have announced plans to transition their fleets to electric power within the next decade. WMID:f0e1d2c3b4a5f6e7d8c9b0a1f2e3d4c5 Government incentives, including tax credits and rebates, have further accelerated adoption in several countries.
+  expected_watermark: "WMID:f0e1d2c3b4a5f6e7d8c9b0a1f2e3d4c5"
+
+- id: "wm_rewrite_007"
+  task_family: "rewrite"
+  instruction: "Rewrite the following text for a 6th-grade reading level, focusing on making the scientific terms accessible. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The human immune system comprises an intricate network of cells, tissues, and organs that collaborate to defend the body against pathogenic microorganisms. White blood cells, or leukocytes, patrol the bloodstream and lymphatic system identifying and neutralizing foreign invaders. WMID:abcdef1234567890abcdef1234567890 Adaptive immunity enables the body to remember previously encountered pathogens and mount faster responses upon re-exposure.
+  expected_watermark: "WMID:abcdef1234567890abcdef1234567890"
+
+- id: "wm_rewrite_008"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph to sound more persuasive and compelling. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Regular exercise has health benefits. Studies show that people who exercise tend to live longer. WMID:9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d Walking for thirty minutes a day can reduce the risk of heart disease and improve mental well-being. Some research also links physical activity to better sleep quality.
+  expected_watermark: "WMID:9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d"
+
+- id: "wm_rewrite_009"
+  task_family: "rewrite"
+  instruction: "Rewrite the following text with a focus on the historical timeline. Reorder information chronologically if needed. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The Internet as we know it today evolved from ARPANET, which was funded by the U.S. Department of Defense. Tim Berners-Lee invented the World Wide Web in 1989, making the Internet accessible to the general public. WMID:1111222233334444aaaabbbbccccdddd The first email was sent by Ray Tomlinson in 1971, and the Domain Name System was established in 1983.
+  expected_watermark: "WMID:1111222233334444aaaabbbbccccdddd"
+
+- id: "wm_rewrite_010"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph for a 3rd-grade audience. Use very short sentences and common words. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Migration is a seasonal movement undertaken by various animal species in response to changes in weather, food availability, and breeding requirements. WMID:aaaa1111bbbb2222cccc3333dddd4444 Arctic terns hold the record for the longest migration, traveling approximately 44,000 miles annually between the Arctic and Antarctic.
+  expected_watermark: "WMID:aaaa1111bbbb2222cccc3333dddd4444"
+
+- id: "wm_rewrite_011"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph to emphasize the economic aspects. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The global coffee industry employs millions of people across growing, processing, trading, and retail. Brazil remains the largest producer, followed by Vietnam and Colombia. WMID:5a5b5c5d5e5f5a5b5c5d5e5f5a5b5c5d Specialty coffee has driven a shift toward direct trade models that aim to pay farmers more equitable prices for high-quality beans.
+  expected_watermark: "WMID:5a5b5c5d5e5f5a5b5c5d5e5f5a5b5c5d"
+
+- id: "wm_rewrite_012"
+  task_family: "rewrite"
+  instruction: "Rewrite the following text to be more concise. Remove redundancy and tighten the prose. Preserve the watermark identifier exactly."
+  carrier_text: |
+    In the sport of basketball, the game is played by two teams of five players each on a rectangular court. The primary and main objective of the game is to shoot the basketball through the opposing team's hoop, which is a raised horizontal ring with a net attached to it. Each successful and completed shot through the hoop is worth either two or three points, depending on the distance and location from which the shot was taken. WMID:6f6e6d6c6b6a696867666564636261a0
+  expected_watermark: "WMID:6f6e6d6c6b6a696867666564636261a0"
+
+- id: "wm_rewrite_013"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph at a college level, incorporating relevant technical terminology. Preserve the watermark identifier exactly."
+  carrier_text: |
+    WMID:ff00ff00ff00ff00ff00ff00ff00ff00 Sourdough bread is made using a starter that contains wild yeast and bacteria. The starter ferments the dough over many hours, which gives the bread its sour taste and chewy texture. Bakers feed the starter regularly with flour and water to keep it alive.
+  expected_watermark: "WMID:ff00ff00ff00ff00ff00ff00ff00ff00"
+
+- id: "wm_rewrite_014"
+  task_family: "rewrite"
+  instruction: "Rewrite the following paragraph with a different emphasis: focus on the dangers rather than the benefits. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Artificial intelligence is transforming industries from healthcare to finance, enabling faster diagnoses and more accurate fraud detection. AI-powered tools can process vast datasets in seconds, uncovering patterns that would take humans months to identify. WMID:0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d However, concerns about bias in training data and job displacement remain significant topics of debate among researchers and policymakers.
+  expected_watermark: "WMID:0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d"
+
+- id: "wm_rewrite_015"
+  task_family: "rewrite"
+  instruction: "Rewrite the following for clarity, breaking up any run-on sentences. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The Great Barrier Reef is the world's largest coral reef system and it stretches over 2,300 kilometers along the northeast coast of Australia and it is so large that it can be seen from outer space and it is home to an incredibly diverse array of marine life including over 1,500 species of fish and 400 types of coral. WMID:b0b1b2b3b4b5b6b7b8b9babbbcbdbebf Climate change and ocean acidification pose serious threats to its long-term survival.
+  expected_watermark: "WMID:b0b1b2b3b4b5b6b7b8b9babbbcbdbebf"
+
+###############################################################################
+# SUMMARIZE (15 cases)
+###############################################################################
+
+- id: "wm_summarize_001"
+  task_family: "summarize"
+  instruction: "Summarize the following text into 3-5 bullet points. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The Renaissance was a cultural movement that began in Italy in the 14th century and spread throughout Europe over the next few centuries. It marked a renewed interest in classical Greek and Roman art, literature, and philosophy. Key figures such as Leonardo da Vinci, Michelangelo, and Raphael produced works that are still celebrated today. WMID:c0c1c2c3c4c5c6c7c8c9cacbcccdcecf The invention of the printing press by Gutenberg around 1440 played a crucial role in disseminating Renaissance ideas. The movement also fostered advances in science, with figures like Galileo challenging established views of the cosmos.
+  expected_watermark: "WMID:c0c1c2c3c4c5c6c7c8c9cacbcccdcecf"
+
+- id: "wm_summarize_002"
+  task_family: "summarize"
+  instruction: "Summarize the following text into one paragraph of no more than three sentences. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Mars has been a target of exploration for decades. NASA's Perseverance rover landed in Jezero Crater in February 2021 to search for signs of ancient microbial life. The rover carries instruments that can analyze rock samples and even produce oxygen from the Martian atmosphere. WMID:d1d2d3d4d5d6d7d8d9d0dadbdcdddedf Its companion, the Ingenuity helicopter, demonstrated powered flight on another planet for the first time. Future missions aim to return collected samples to Earth for detailed laboratory analysis.
+  expected_watermark: "WMID:d1d2d3d4d5d6d7d8d9d0dadbdcdddedf"
+
+- id: "wm_summarize_003"
+  task_family: "summarize"
+  instruction: "Summarize the following into a single sentence. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Sleep is essential for cognitive function, emotional regulation, and physical health. During sleep, the brain consolidates memories and clears metabolic waste products. WMID:e1e2e3e4e5e6e7e8e9e0eaebecedeeef Chronic sleep deprivation has been linked to increased risks of obesity, diabetes, cardiovascular disease, and depression. Most adults require seven to nine hours of sleep per night for optimal health.
+  expected_watermark: "WMID:e1e2e3e4e5e6e7e8e9e0eaebecedeeef"
+
+- id: "wm_summarize_004"
+  task_family: "summarize"
+  instruction: "Create an executive summary of the following passage. Use a professional tone and keep it to one paragraph. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The global semiconductor shortage that began in 2020 exposed critical vulnerabilities in international supply chains. Automakers were among the hardest hit, with production cuts costing the industry an estimated $210 billion in revenue during 2021. WMID:f1f2f3f4f5f6f7f8f9f0fafbfcfdfeff Governments responded by announcing major investments in domestic chip manufacturing. The U.S. CHIPS Act allocated $52 billion to bolster American semiconductor production, while the European Union proposed a similar initiative targeting $43 billion in public and private investment. Industry analysts expect supply-demand balance to normalize by 2025, though geopolitical tensions could disrupt projections.
+  expected_watermark: "WMID:f1f2f3f4f5f6f7f8f9f0fafbfcfdfeff"
+
+- id: "wm_summarize_005"
+  task_family: "summarize"
+  instruction: "Summarize the following text into bullet points, with one bullet per key idea. Preserve the watermark identifier exactly."
+  carrier_text: |
+    WMID:1234abcd5678ef901234abcd5678ef90 Coral reefs cover less than one percent of the ocean floor but support roughly twenty-five percent of all marine species. They act as natural barriers protecting coastlines from storm surges and erosion. Reefs also contribute to local economies through tourism and fishing, generating tens of billions of dollars annually. However, rising ocean temperatures cause coral bleaching, a stress response that can lead to widespread reef death if conditions persist.
+  expected_watermark: "WMID:1234abcd5678ef901234abcd5678ef90"
+
+- id: "wm_summarize_006"
+  task_family: "summarize"
+  instruction: "Summarize the following passage into one paragraph. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The human gut microbiome consists of trillions of microorganisms that play a vital role in digestion, immunity, and even mental health. Research has shown that a diverse microbiome is generally associated with better health outcomes. Dietary choices, particularly the consumption of fiber-rich foods and fermented products, can significantly influence microbial diversity. WMID:aabb1122ccdd3344eeff5566aabb7788 Antibiotics, while necessary for treating bacterial infections, can temporarily disrupt the microbiome balance. Scientists are exploring fecal microbiota transplants and targeted probiotics as therapies for conditions ranging from inflammatory bowel disease to depression.
+  expected_watermark: "WMID:aabb1122ccdd3344eeff5566aabb7788"
+
+- id: "wm_summarize_007"
+  task_family: "summarize"
+  instruction: "Summarize the following into exactly three bullet points. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Wind energy has become one of the fastest-growing renewable energy sources worldwide. Modern wind turbines can generate enough electricity to power thousands of homes. Offshore wind farms take advantage of stronger and more consistent winds over the ocean, though they are more expensive to build and maintain than onshore installations. WMID:9876543210fedcba9876543210fedcba Denmark leads the world in wind energy per capita, generating over 40 percent of its electricity from wind. Technological improvements continue to drive down costs and increase turbine efficiency.
+  expected_watermark: "WMID:9876543210fedcba9876543210fedcba"
+
+- id: "wm_summarize_008"
+  task_family: "summarize"
+  instruction: "Write a one-sentence summary of the following text. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The Amazon rainforest produces approximately 20 percent of the world's oxygen and houses an estimated 10 percent of all species on Earth. WMID:1a1a2b2b3c3c4d4d5e5e6f6f7a7a8b8b Deforestation driven by agriculture, logging, and mining has accelerated in recent decades, threatening biodiversity and indigenous communities. Scientists warn that continued destruction could push the ecosystem past a tipping point, transforming large areas of forest into savanna.
+  expected_watermark: "WMID:1a1a2b2b3c3c4d4d5e5e6f6f7a7a8b8b"
+
+- id: "wm_summarize_009"
+  task_family: "summarize"
+  instruction: "Create an executive summary suitable for a board presentation. Keep it under 50 words. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Our Q3 results show a 12 percent increase in recurring revenue compared to the previous quarter, driven primarily by expansion in the enterprise segment. Customer retention rates remained above 95 percent. WMID:00112233445566778899aabbccddeeff We onboarded 47 new enterprise clients and expanded contracts with 23 existing accounts. Operating expenses grew by 8 percent due to increased hiring in engineering and sales. Net margins improved by 2 percentage points to 18 percent.
+  expected_watermark: "WMID:00112233445566778899aabbccddeeff"
+
+- id: "wm_summarize_010"
+  task_family: "summarize"
+  instruction: "Summarize the following into bullet points, grouping related ideas together. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Ancient Egypt's civilization flourished along the Nile River for over three thousand years. The Egyptians developed hieroglyphic writing, built monumental pyramids, and made advances in medicine, mathematics, and astronomy. WMID:ffeeddccbbaa99887766554433221100 The pharaohs served as both political leaders and religious figures, believed to be intermediaries between gods and people. Trade networks connected Egypt to Mesopotamia, Nubia, and the Mediterranean. The civilization's decline came gradually through a series of foreign conquests, culminating in Roman annexation in 30 BCE.
+  expected_watermark: "WMID:ffeeddccbbaa99887766554433221100"
+
+- id: "wm_summarize_011"
+  task_family: "summarize"
+  instruction: "Summarize the following text into one concise paragraph. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Blockchain technology underpins cryptocurrencies like Bitcoin, but its applications extend far beyond digital currencies. Supply chain managers use blockchain to track products from manufacturer to consumer, ensuring authenticity and reducing fraud. WMID:abcdef0123456789abcdef0123456789 In healthcare, blockchain can secure patient records while allowing authorized providers to access them. Smart contracts automate agreements without intermediaries, reducing costs and processing times. Despite its promise, blockchain faces challenges including high energy consumption, scalability limitations, and regulatory uncertainty.
+  expected_watermark: "WMID:abcdef0123456789abcdef0123456789"
+
+- id: "wm_summarize_012"
+  task_family: "summarize"
+  instruction: "Summarize the following into 4-6 bullet points covering all main ideas. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The James Webb Space Telescope, launched in December 2021, represents the most powerful space observatory ever built. Its primary mirror spans 6.5 meters, allowing it to capture infrared light from the earliest galaxies formed after the Big Bang. WMID:a0a0b1b1c2c2d3d3e4e4f5f5a6a6b7b7 Webb orbits the Sun at the second Lagrange point, approximately 1.5 million kilometers from Earth. Early observations have already provided unprecedented views of exoplanet atmospheres, stellar nurseries, and distant galaxy clusters. The telescope is expected to operate for at least 20 years.
+  expected_watermark: "WMID:a0a0b1b1c2c2d3d3e4e4f5f5a6a6b7b7"
+
+- id: "wm_summarize_013"
+  task_family: "summarize"
+  instruction: "Write a single-sentence summary capturing the main argument. Preserve the watermark identifier exactly."
+  carrier_text: |
+    WMID:1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c Universal basic income proposals have gained traction as automation threatens to displace workers across multiple industries. Proponents argue that a guaranteed income floor would reduce poverty, stimulate consumer spending, and provide a safety net during economic transitions. Critics counter that it would be prohibitively expensive, reduce the incentive to work, and fail to address underlying structural inequalities. Pilot programs in Finland, Kenya, and several U.S. cities have produced mixed but generally encouraging results.
+  expected_watermark: "WMID:1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c"
+
+- id: "wm_summarize_014"
+  task_family: "summarize"
+  instruction: "Summarize the following passage into one paragraph suitable for a newsletter. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The sport of competitive climbing was included in the Olympic Games for the first time at Tokyo 2020. Athletes competed in three disciplines: lead climbing, speed climbing, and bouldering, with results combined into a single score. WMID:aaabbbcccdddeeefffaaabbbcccdddeee The inclusion sparked debate among climbers, many of whom felt combining speed climbing with the other two disciplines was unfair, as speed climbing requires a fundamentally different skill set. For the Paris 2024 Games, the format was revised to separate speed climbing into its own event. Viewership data showed strong global interest in the sport.
+  expected_watermark: "WMID:aaabbbcccdddeeefffaaabbbcccdddeee"
+
+- id: "wm_summarize_015"
+  task_family: "summarize"
+  instruction: "Create an executive summary of the following research findings. Preserve the watermark identifier exactly."
+  carrier_text: |
+    A longitudinal study of 12,000 participants over 15 years found that regular consumption of ultra-processed foods was associated with a 31 percent higher risk of cardiovascular mortality. The association held after adjusting for total caloric intake, socioeconomic status, and physical activity levels. WMID:1234567890abcdef1234567890abcdef Participants who replaced 10 percent of ultra-processed food intake with minimally processed alternatives showed a statistically significant reduction in all-cause mortality. The researchers recommend updated dietary guidelines that specifically address ultra-processed food consumption.
+  expected_watermark: "WMID:1234567890abcdef1234567890abcdef"
+
+###############################################################################
+# FORMAT CONVERT (10 cases)
+###############################################################################
+
+- id: "wm_format_001"
+  task_family: "format_convert"
+  instruction: "Convert the following plain text into well-structured markdown with appropriate headers, bold text, and a bulleted list. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Guide to Composting. Composting is the process of recycling organic waste into nutrient-rich soil. WMID:aabbccdd11223344aabbccdd11223344 Benefits include reducing landfill waste, enriching garden soil, and lowering your carbon footprint. To start composting you need a bin or designated area, a mix of green materials like food scraps and grass clippings, and brown materials like dry leaves and cardboard. Turn the pile every few weeks and keep it moist.
+  expected_watermark: "WMID:aabbccdd11223344aabbccdd11223344"
+
+- id: "wm_format_002"
+  task_family: "format_convert"
+  instruction: "Convert the following markdown text into plain text by removing all formatting (headers, bold, italics, links). Preserve the watermark identifier exactly."
+  carrier_text: |
+    # Benefits of Reading
+
+    Reading regularly **improves vocabulary**, enhances *critical thinking*, and reduces stress. Studies from the [National Institute of Health](https://example.com) suggest that reading for just 30 minutes a day can measurably improve cognitive function.
+
+    WMID:eeff0011eeff0011eeff0011eeff0011
+
+    ## Key Findings
+    - Readers score higher on empathy assessments
+    - Daily readers report **lower stress levels**
+    - Fiction readers show improved *theory of mind*
+  expected_watermark: "WMID:eeff0011eeff0011eeff0011eeff0011"
+
+- id: "wm_format_003"
+  task_family: "format_convert"
+  instruction: "Convert the following paragraph into a numbered list where each key fact is a separate item. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The Pacific Ocean is the largest and deepest ocean on Earth, covering more than 63 million square miles. It contains the Mariana Trench, the deepest point on the planet at approximately 36,000 feet below sea level. WMID:1122334455667788aabbccddeeff0011 The Pacific is home to the Ring of Fire, a horseshoe-shaped zone of intense seismic and volcanic activity. Over 75 percent of the world's active volcanoes are located along the Ring of Fire.
+  expected_watermark: "WMID:1122334455667788aabbccddeeff0011"
+
+- id: "wm_format_004"
+  task_family: "format_convert"
+  instruction: "Convert the following text into a two-column table with headers 'Nutrient' and 'Function'. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The human body requires several key nutrients. Protein supports muscle growth and tissue repair. Carbohydrates provide the primary source of energy for daily activities. WMID:a1a2a3a4b1b2b3b4c1c2c3c4d1d2d3d4 Fats are essential for hormone production and nutrient absorption. Vitamins play diverse roles including immune support and bone health. Minerals like calcium and iron are critical for skeletal strength and oxygen transport respectively.
+  expected_watermark: "WMID:a1a2a3a4b1b2b3b4c1c2c3c4d1d2d3d4"
+
+- id: "wm_format_005"
+  task_family: "format_convert"
+  instruction: "Convert the following numbered list into flowing prose paragraphs. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Steps to change a flat tire:
+    1. Pull over to a safe location and turn on hazard lights.
+    2. Retrieve the spare tire, jack, and lug wrench from the trunk.
+    3. Loosen the lug nuts on the flat tire before raising the vehicle.
+    WMID:b5b6b7b8c5c6c7c8d5d6d7d8e5e6e7e8
+    4. Use the jack to lift the car until the flat tire clears the ground.
+    5. Remove the lug nuts completely and pull off the flat tire.
+    6. Mount the spare tire and hand-tighten the lug nuts.
+    7. Lower the vehicle and fully tighten the lug nuts in a star pattern.
+  expected_watermark: "WMID:b5b6b7b8c5c6c7c8d5d6d7d8e5e6e7e8"
+
+- id: "wm_format_006"
+  task_family: "format_convert"
+  instruction: "Convert the following plain text into markdown with a title, subheadings, and a bulleted list for the ingredients. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Classic Tomato Soup Recipe. This simple recipe makes a rich and comforting tomato soup. Ingredients: 2 cans of crushed tomatoes, 1 onion diced, 3 cloves garlic minced, 2 cups vegetable broth, 1 tablespoon olive oil, salt and pepper to taste, fresh basil for garnish. WMID:ccccddddeeee1111222233334444aaaa Instructions: Heat olive oil in a pot and saute onion and garlic until soft. Add tomatoes and broth, then simmer for 20 minutes. Blend until smooth and season to taste.
+  expected_watermark: "WMID:ccccddddeeee1111222233334444aaaa"
+
+- id: "wm_format_007"
+  task_family: "format_convert"
+  instruction: "Convert the following text into a three-column table with headers 'Planet', 'Distance from Sun', and 'Notable Feature'. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Mercury is about 36 million miles from the Sun and has extreme temperature swings. Venus is roughly 67 million miles away and has a thick toxic atmosphere. Earth is 93 million miles from the Sun and is the only known planet with liquid surface water. WMID:0f0e0d0c0b0a09080706050403020100 Mars sits at 142 million miles and features the largest volcano in the solar system, Olympus Mons.
+  expected_watermark: "WMID:0f0e0d0c0b0a09080706050403020100"
+
+- id: "wm_format_008"
+  task_family: "format_convert"
+  instruction: "Convert the following markdown content into clean plain text suitable for a text-only email. Remove all markdown syntax. Preserve the watermark identifier exactly."
+  carrier_text: |
+    ## Meeting Notes - Project Alpha
+
+    **Date:** March 15, 2025
+    **Attendees:** Sarah, James, Priya
+
+    WMID:a1b1c1d1e1f1a2b2c2d2e2f2a3b3c3d3
+
+    ### Action Items
+    - [ ] Sarah: Finalize the Q2 budget by Friday
+    - [ ] James: Schedule vendor demos for next week
+    - [ ] Priya: Update the risk register with **new compliance requirements**
+
+    ### Decisions
+    1. Move launch date to *April 20*
+    2. Increase testing budget by **15%**
+  expected_watermark: "WMID:a1b1c1d1e1f1a2b2c2d2e2f2a3b3c3d3"
+
+- id: "wm_format_009"
+  task_family: "format_convert"
+  instruction: "Convert the following paragraph into a bulleted list where each bullet captures one distinct idea. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Honey bees are vital pollinators responsible for about one-third of the food we eat. A single colony can contain up to 60,000 bees, each with a specialized role. The queen lays eggs, workers forage and maintain the hive, and drones exist solely to mate. WMID:1010202030304040505060607070abab Bees communicate the location of flowers through a behavior known as the waggle dance. Colony collapse disorder, whose exact cause remains debated, has led to significant declines in bee populations worldwide.
+  expected_watermark: "WMID:1010202030304040505060607070abab"
+
+- id: "wm_format_010"
+  task_family: "format_convert"
+  instruction: "Convert the following bulleted list into a cohesive paragraph. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Key facts about the Sahara Desert:
+    - Largest hot desert in the world, spanning 3.6 million square miles
+    - Covers parts of 11 African countries
+    - Temperatures can exceed 130 degrees Fahrenheit during the day
+    - WMID:f1e2d3c4b5a6f7e8d9c0b1a2f3e4d5c6
+    - Despite its harsh climate, the Sahara supports over 500 plant species
+    - Nomadic peoples such as the Tuareg have inhabited the region for centuries
+    - The Sahara was once a green savanna, as recently as 5,000 years ago
+  expected_watermark: "WMID:f1e2d3c4b5a6f7e8d9c0b1a2f3e4d5c6"
+
+###############################################################################
+# STYLE TRANSFER (10 cases)
+###############################################################################
+
+- id: "wm_style_001"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following formal text in a casual, conversational tone. Preserve the watermark identifier exactly."
+  carrier_text: |
+    It is with great pleasure that we announce the forthcoming launch of our redesigned mobile application. The engineering team has dedicated considerable effort to enhancing the user interface and optimizing performance metrics. WMID:cafe0123babe4567deaf0123bead4567 We anticipate that these improvements will result in a materially improved user experience and increased engagement.
+  expected_watermark: "WMID:cafe0123babe4567deaf0123bead4567"
+
+- id: "wm_style_002"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following casual text in a formal, professional tone. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Hey team, just a heads up that we're pushing the deadline back a couple weeks. Things got a bit crazy with the server migration and we lost some time. WMID:feed1234face5678bead1234cafe5678 No biggie though, we'll catch up. Let's sync next Monday to figure out the new timeline. Cheers!
+  expected_watermark: "WMID:feed1234face5678bead1234cafe5678"
+
+- id: "wm_style_003"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following technical text so that a non-technical reader can understand it. Avoid jargon. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The application employs a microservices architecture orchestrated via Kubernetes, with each service communicating through gRPC and publishing events to a Kafka message broker. WMID:ace1ace2ace3ace4ace5ace6ace7ace8 Database sharding across PostgreSQL instances ensures horizontal scalability, while Redis serves as the caching layer to reduce read latency below 10 milliseconds at the 99th percentile.
+  expected_watermark: "WMID:ace1ace2ace3ace4ace5ace6ace7ace8"
+
+- id: "wm_style_004"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following neutral text with an enthusiastic, excited tone. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The company reported quarterly earnings that met analyst expectations. Revenue was $4.2 billion, representing a 6 percent increase year over year. WMID:b0a1b2a3b4a5b6a7b8a9babbbcbdbebf The board approved a dividend of $0.50 per share. Guidance for the next quarter was maintained at previous levels.
+  expected_watermark: "WMID:b0a1b2a3b4a5b6a7b8a9babbbcbdbebf"
+
+- id: "wm_style_005"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following casual text in a formal academic style suitable for a journal article. Preserve the watermark identifier exactly."
+  carrier_text: |
+    Turns out, dogs are way better at reading human emotions than we thought. They can tell when you're happy or sad just by looking at your face, and they even change their behavior based on how you're feeling. WMID:1a2a3a4a5a6a7a8a9a0abacadaeafa1b Some researchers think this is because dogs have been living with humans for thousands of years and basically evolved to get us.
+  expected_watermark: "WMID:1a2a3a4a5a6a7a8a9a0abacadaeafa1b"
+
+- id: "wm_style_005b"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following text from an enthusiastic tone to a neutral, objective tone. Preserve the watermark identifier exactly."
+  carrier_text: |
+    This is absolutely the BEST pizza I've ever had! The crust is amazingly crispy and perfectly golden, and the sauce is just incredible - you can totally taste the fresh tomatoes and basil. WMID:2b2c2d2e2f2a2b2c2d2e2f2a2b2c2d2e And don't even get me started on the mozzarella - it's SO stretchy and delicious! Everyone needs to try this place immediately!
+  expected_watermark: "WMID:2b2c2d2e2f2a2b2c2d2e2f2a2b2c2d2e"
+
+- id: "wm_style_006"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following text from a technical perspective to a storytelling narrative style. Preserve the watermark identifier exactly."
+  carrier_text: |
+    On July 20, 1969, the Apollo 11 Lunar Module Eagle landed on the Moon's surface at 20:17 UTC. Commander Neil Armstrong descended the ladder and became the first human to set foot on the Moon at 02:56 UTC on July 21. WMID:3c3d3e3f4a4b4c4d5e5f6a6b7c7d8e8f Buzz Aldrin joined him 19 minutes later. They spent approximately two hours outside the spacecraft collecting samples and taking photographs.
+  expected_watermark: "WMID:3c3d3e3f4a4b4c4d5e5f6a6b7c7d8e8f"
+
+- id: "wm_style_007"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following formal business text in a friendly, casual tone suitable for a company blog. Preserve the watermark identifier exactly."
+  carrier_text: |
+    WMID:4d4e4f5a5b5c5d5e6f7a7b7c8d8e8f9a The organization has implemented a comprehensive wellness program designed to support employee physical and mental health. The program encompasses subsidized gym memberships, on-site counseling services, and flexible scheduling options. Preliminary data indicate a 15 percent reduction in reported burnout and a 22 percent increase in employee satisfaction scores.
+  expected_watermark: "WMID:4d4e4f5a5b5c5d5e6f7a7b7c8d8e8f9a"
+
+- id: "wm_style_008"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following layman's description using proper scientific and technical terminology. Preserve the watermark identifier exactly."
+  carrier_text: |
+    When you get a sunburn, the UV rays from the sun damage the DNA in your skin cells. Your body turns the area red and makes it hurt as part of the healing process. WMID:5e5f6a6b7c7d8e8f9a9b0c0d1e1f2a2b If the damage is really bad, the cells might start growing out of control, which is basically what skin cancer is. Wearing sunscreen blocks most of the harmful rays.
+  expected_watermark: "WMID:5e5f6a6b7c7d8e8f9a9b0c0d1e1f2a2b"
+
+- id: "wm_style_009"
+  task_family: "style_transfer"
+  instruction: "Rewrite the following dry, factual text in a humorous, lighthearted tone. Preserve the watermark identifier exactly."
+  carrier_text: |
+    The platypus is a semi-aquatic mammal native to eastern Australia. It is one of only five species of monotremes, mammals that lay eggs. The male platypus possesses venomous spurs on its hind legs. WMID:6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c Its bill contains electroreceptors that detect the electric fields generated by the muscle contractions of its prey. The platypus was initially considered a hoax by European naturalists when first described in 1799.
+  expected_watermark: "WMID:6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c"

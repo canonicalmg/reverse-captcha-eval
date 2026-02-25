@@ -1,0 +1,25 @@
+id: hidden_message_extraction
+name: "Hidden-Message Extraction"
+version: "1.0"
+description: "Evaluates whether models can correctly extract hidden messages from text given explicit extraction rules."
+
+system_prompt: |
+  You are a precise text analysis assistant. Follow the extraction rules exactly as provided.
+  Output ONLY the extracted message, nothing else. No explanations, no formatting, no quotes.
+  If the rules indicate there is no hidden message, output exactly: NONE
+
+schemes:
+  - acrostic
+  - index_of_word
+  - punctuation_mapping
+  - hidden_character
+  - zero_width
+  - zero_width_hinted
+  - zero_width_unhinted
+  - zero_width_binary_hinted
+  - zero_width_binary_unhinted
+  - zero_width_binary_norule
+  - zero_width_binary_control
+  - no_hint
+  - no_message_control
+  - noise_variant

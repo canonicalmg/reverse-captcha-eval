@@ -1,0 +1,2 @@
+model_1,model_2,rate_1,rate_2,odds_ratio,p_value,cohens_h,p_bonferroni,significant
+anthropic:claude-opus-4-20250514,anthropic:claude-sonnet-4-20250514,0.5208333333333334,0.6875,0.49407114624505927,0.0002629252147873939,-0.3427180420730611,0.0002629252147873939,True

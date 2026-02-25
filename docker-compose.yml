@@ -1,0 +1,20 @@
+services:
+  evalrun:
+    build: .
+    env_file: .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./results:/app/results
+      - ./report:/app/report
+      - ./packs:/app/packs
+    working_dir: /app
+    entrypoint: ["evalrun"]
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    volumes:
+      - ./tests:/app/tests
+      - ./packs:/app/packs

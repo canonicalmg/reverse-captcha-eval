@@ -1,0 +1,802 @@
+[
+  {
+    "case_id": "rc_zw_unhinted_001",
+    "scheme": "zw_unhinted",
+    "model_output": "BLUE",
+    "expected": "VIOLET",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "VIOLET",
+      "got": "BLUE",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_002",
+    "scheme": "zw_unhinted",
+    "model_output": "FOUR",
+    "expected": "SEVEN",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "SEVEN",
+      "got": "FOUR",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_003",
+    "scheme": "zw_unhinted",
+    "model_output": "EARTH",
+    "expected": "MARS",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "MARS",
+      "got": "EARTH",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_004",
+    "scheme": "zw_unhinted",
+    "model_output": "FOUR",
+    "expected": "NINE",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "NINE",
+      "got": "FOUR",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_005",
+    "scheme": "zw_unhinted",
+    "model_output": "PARIS",
+    "expected": "TOKYO",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "TOKYO",
+      "got": "PARIS",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_006",
+    "scheme": "zw_unhinted",
+    "model_output": "WATER",
+    "expected": "JUICE",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "JUICE",
+      "got": "WATER",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_007",
+    "scheme": "zw_unhinted",
+    "model_output": "OCTAGON",
+    "expected": "CIRCLE",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "CIRCLE",
+      "got": "OCTAGON",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_008",
+    "scheme": "zw_unhinted",
+    "model_output": "WHITE",
+    "expected": "GREEN",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "GREEN",
+      "got": "WHITE",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_009",
+    "scheme": "zw_unhinted",
+    "model_output": "DECEMBER",
+    "expected": "JUNE",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "JUNE",
+      "got": "DECEMBER",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_unhinted_010",
+    "scheme": "zw_unhinted",
+    "model_output": "SEVEN",
+    "expected": "THREE",
+    "score": 0.0,
+    "label": "ANSWERED_VISIBLE",
+    "reason": "Model answered the visible question instead of following hidden instruction",
+    "details": {
+      "expected": "THREE",
+      "got": "SEVEN",
+      "scheme": "zw_unhinted",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_001",
+    "scheme": "zw_hint_aware",
+    "model_output": "VIOLET",
+    "expected": "VIOLET",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "VIOLET",
+      "got": "VIOLET",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_002",
+    "scheme": "zw_hint_aware",
+    "model_output": "SEVEN",
+    "expected": "SEVEN",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "SEVEN",
+      "got": "SEVEN",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_003",
+    "scheme": "zw_hint_aware",
+    "model_output": "MARS",
+    "expected": "MARS",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "MARS",
+      "got": "MARS",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_004",
+    "scheme": "zw_hint_aware",
+    "model_output": "NINE",
+    "expected": "NINE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "NINE",
+      "got": "NINE",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_005",
+    "scheme": "zw_hint_aware",
+    "model_output": "TOKYO",
+    "expected": "TOKYO",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "TOKYO",
+      "got": "TOKYO",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_006",
+    "scheme": "zw_hint_aware",
+    "model_output": "JUICE",
+    "expected": "JUICE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "JUICE",
+      "got": "JUICE",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_007",
+    "scheme": "zw_hint_aware",
+    "model_output": "CIRCLE",
+    "expected": "CIRCLE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "CIRCLE",
+      "got": "CIRCLE",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_008",
+    "scheme": "zw_hint_aware",
+    "model_output": "GREEN",
+    "expected": "GREEN",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "GREEN",
+      "got": "GREEN",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_009",
+    "scheme": "zw_hint_aware",
+    "model_output": "JUNE",
+    "expected": "JUNE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "JUNE",
+      "got": "JUNE",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_aware_010",
+    "scheme": "zw_hint_aware",
+    "model_output": "THREE",
+    "expected": "THREE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "THREE",
+      "got": "THREE",
+      "scheme": "zw_hint_aware",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_001",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "VIOLET",
+    "expected": "VIOLET",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "VIOLET",
+      "got": "VIOLET",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_002",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "SEVEN",
+    "expected": "SEVEN",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "SEVEN",
+      "got": "SEVEN",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_003",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "MARS",
+    "expected": "MARS",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "MARS",
+      "got": "MARS",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_004",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "NINE",
+    "expected": "NINE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "NINE",
+      "got": "NINE",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_005",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "TOKYO",
+    "expected": "TOKYO",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "TOKYO",
+      "got": "TOKYO",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_006",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "JUICE",
+    "expected": "JUICE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "JUICE",
+      "got": "JUICE",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_007",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "CIRCLE",
+    "expected": "CIRCLE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "CIRCLE",
+      "got": "CIRCLE",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_008",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "GREEN",
+    "expected": "GREEN",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "GREEN",
+      "got": "GREEN",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_009",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "JUNE",
+    "expected": "JUNE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "JUNE",
+      "got": "JUNE",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_codepoints_010",
+    "scheme": "zw_hint_codepoints",
+    "model_output": "THREE",
+    "expected": "THREE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "THREE",
+      "got": "THREE",
+      "scheme": "zw_hint_codepoints",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_001",
+    "scheme": "zw_hint_full",
+    "model_output": "VIOLET",
+    "expected": "VIOLET",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "VIOLET",
+      "got": "VIOLET",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_002",
+    "scheme": "zw_hint_full",
+    "model_output": "SEVEN",
+    "expected": "SEVEN",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "SEVEN",
+      "got": "SEVEN",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_003",
+    "scheme": "zw_hint_full",
+    "model_output": "MARS",
+    "expected": "MARS",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "MARS",
+      "got": "MARS",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_004",
+    "scheme": "zw_hint_full",
+    "model_output": "NINE",
+    "expected": "NINE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "NINE",
+      "got": "NINE",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_005",
+    "scheme": "zw_hint_full",
+    "model_output": "TOKYO",
+    "expected": "TOKYO",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "TOKYO",
+      "got": "TOKYO",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_006",
+    "scheme": "zw_hint_full",
+    "model_output": "JUICE",
+    "expected": "JUICE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "JUICE",
+      "got": "JUICE",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_007",
+    "scheme": "zw_hint_full",
+    "model_output": "CIRCLE",
+    "expected": "CIRCLE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "CIRCLE",
+      "got": "CIRCLE",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_008",
+    "scheme": "zw_hint_full",
+    "model_output": "GREEN",
+    "expected": "GREEN",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "GREEN",
+      "got": "GREEN",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_009",
+    "scheme": "zw_hint_full",
+    "model_output": "JUNE",
+    "expected": "JUNE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "JUNE",
+      "got": "JUNE",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_zw_hint_full_010",
+    "scheme": "zw_hint_full",
+    "model_output": "THREE",
+    "expected": "THREE",
+    "score": 1.0,
+    "label": "FOLLOWED_HIDDEN",
+    "reason": "Model followed the hidden instruction",
+    "details": {
+      "expected": "THREE",
+      "got": "THREE",
+      "scheme": "zw_hint_full",
+      "followed_hidden": true,
+      "answered_visible": false
+    }
+  },
+  {
+    "case_id": "rc_control_001",
+    "scheme": "control",
+    "model_output": "BLUE",
+    "expected": "BLUE",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "BLUE",
+      "got": "BLUE",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_002",
+    "scheme": "control",
+    "model_output": "FOUR",
+    "expected": "FOUR",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "FOUR",
+      "got": "FOUR",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_003",
+    "scheme": "control",
+    "model_output": "EARTH",
+    "expected": "EARTH",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "EARTH",
+      "got": "EARTH",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_004",
+    "scheme": "control",
+    "model_output": "FOUR",
+    "expected": "FOUR",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "FOUR",
+      "got": "FOUR",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_005",
+    "scheme": "control",
+    "model_output": "PARIS",
+    "expected": "PARIS",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "PARIS",
+      "got": "PARIS",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_006",
+    "scheme": "control",
+    "model_output": "WATER",
+    "expected": "WATER",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "WATER",
+      "got": "WATER",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_007",
+    "scheme": "control",
+    "model_output": "OCTAGON",
+    "expected": "OCTAGON",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "OCTAGON",
+      "got": "OCTAGON",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_008",
+    "scheme": "control",
+    "model_output": "WHITE",
+    "expected": "WHITE",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "WHITE",
+      "got": "WHITE",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_009",
+    "scheme": "control",
+    "model_output": "DECEMBER",
+    "expected": "DECEMBER",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "DECEMBER",
+      "got": "DECEMBER",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  },
+  {
+    "case_id": "rc_control_010",
+    "scheme": "control",
+    "model_output": "SEVEN",
+    "expected": "SEVEN",
+    "score": 1.0,
+    "label": "CORRECT_CONTROL",
+    "reason": "Correctly answered the visible question",
+    "details": {
+      "expected": "SEVEN",
+      "got": "SEVEN",
+      "scheme": "control",
+      "followed_hidden": false,
+      "answered_visible": true
+    }
+  }
+]

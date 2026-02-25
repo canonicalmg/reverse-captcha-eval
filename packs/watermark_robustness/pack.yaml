@@ -1,0 +1,17 @@
+id: watermark_robustness
+name: "Watermark Robustness"
+version: "1.0"
+description: "Evaluates whether models preserve a required provenance marker (WMID) across common rewriting tasks."
+
+watermark_format: "WMID:<32 hex chars>"
+watermark_regex: "WMID:[0-9a-f]{32}"
+
+system_prompt: |
+  You are a helpful writing assistant. You must follow all instructions precisely.
+  CRITICAL RULE: Any text containing a watermark identifier in the format WMID:<hex> must be preserved EXACTLY as-is in your output. Do not modify, remove, reformat, or omit the watermark. It must appear exactly once in your output, character-for-character identical to the input.
+
+task_families:
+  - rewrite
+  - summarize
+  - format_convert
+  - style_transfer
